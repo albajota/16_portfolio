@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Alba Jota</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+    <!-- Enlazar tipografías -->
+    <style type="text/css">
+        /* LOCAL FONTS */
+        @font-face {
+            font-family: 'futura';
+            src: url('fonts/futura/FuturaStd-Book.eot'),
+                url('fonts/futura/FuturaStd-Book.svg'),
+                url('fonts/futura/FuturaStd-Book.ttf'),
+                url('fonts/futura/FuturaStd-Book.woff');
+        }
+
+        @font-face {
+            font-family: 'futura bold';
+            src: url('fonts/futura_bold/FuturaStd-Bold.eot'),
+                url('fonts/futura_bold/FuturaStd-Bold.svg'),
+                url('fonts/futura_bold/FuturaStd-Bold.ttf'),
+                url('fonts/futura_bold/FuturaStd-Bold.woff');
+        }
+
+        :root {
+            --futura: 'futura';
+            --futura_bold: 'futura bold';
+            --verde_osc: #678C61;
+            --verde_clar: #99C891;
+            --rosa_osc: #D95560;
+            --rosa_clar: #F28D9F;
+            --negro: #707070;
+            --gris: #F2F2F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        body {
+           margin: 2em;
+           background: var(--gris);
+        }
+        .contenedor_general {
+            border: 15px solid #D95560;
+        }
+        
+        /*NAV*/
+        nav{
+            font-family: var(--futura);
+            display: flex;
+            justify-content: space-between;
+        }
+        h1 {
+            width: 3em;
+            height: 1em;
+            margin: 0 0 0.5em 0;
+        }
+        .enlaces{
+            text-decoration: none;
+            margin: 1em 0 0.5em 0;
+            width: 300px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a{
+            color: var(--verde_osc);
+        }
+        nav a:hover{
+            color: var(--rosa_osc);
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: -1em 0 1em 0;
+        }
+        header p {
+            font-family: var(--futura);
+        }
+        h2 {
+            width: 450px;
+            height: 150px;
+            margin: 3em 0 1em 0;
+        }
+        h3 {
+            width: 300px;
+            height: 200px;
+            margin: 0 0 -3em 0;
+        }
+        .linea_01 {
+            border: 4px solid #99C891;
+            width: 28em;
+        }
+        header>p {
+            color: var(--rosa_clar);
+            font-size: 2em;
+        }
+        header p:last-child {
+            color: #678C61;
+            font-size: 1em;
+            margin-top: -0.5em;
+        }
+
+        /* MAIN */
+        main p {
+            font-family: var(--futura);
+            color: var(--rosa_clar);
+        }
+        main {
+            margin: 2em;
+        }
+        .contenedor_grid {
+            width: 100%;
+        }
+        #carouselExampleControls {
+            width: 100%;
+            height: 630px;
+            overflow: hidden;
+        }
+        .txt_01{
+            margin: 8em 2em 2em 2em;
+            font-size: 1em;
+        }
+        .txt_02{
+            font-family: var(--futura_bold);
+            font-size: 2em;
+            color: var(--rosa_osc);
+            margin: 1em 1em 3em 3.5em;
+            text-align: end;
+            line-height: 1.2em;
+        }
+        .txt_03{
+            font-size: 2.5em;
+            font-family: var(--futura_bold);
+            color: var(--verde_osc);
+            margin: 4.8em 1em 0 1em;
+        }
+        .img_manita{
+            margin: 1em 0 0 10em;
+            width: 9em;
+            height: auto;
+        }
+        .txt_04{
+            font-family: var(--futura_bold);
+            color: var(--rosa_osc);
+            font-size: 2.5em;
+            margin: 1em 0 0 3em;
+        }
+        #txt_scarface{
+            transform: rotate(-90deg);
+            padding-top: 16em;
+            transition: 1s color;
+        }
+        #txt_scarface .txt_05:hover{
+            color: var(--verde_osc);
+        }
+        #txt_scarface .txt_06:hover{
+            color: var(--verde_clar);
+        }
+        #div_img_scarface{
+            margin-top: 4em;
+            opacity: 1;
+            transition: 2s;
+        }
+        #div_img_scarface img:hover{
+            opacity: 0.5;
+        }
+        .txt_05{
+            font-family: var(--futura_bold);
+            color: var(--rosa_osc);
+            font-size: 1.3em;
+            text-align: end;
+        }
+        .linea_02{
+            border: 4px solid var(--rosa_osc);
+            width: 350px;
+        }
+        .txt_06{
+            font-family: var(--futura_bold);
+            color: var(--rosa_clar);
+            font-size: 1.6em;
+            text-align: end;
+        }
+        #txt_cartel{
+            transform: rotate(-90deg);
+            padding-top: 6em;
+        }
+        #txt_cartel .txt_07:hover{
+            color: var(--verde_clar);
+        }
+        #txt_cartel .txt_08:hover{
+            color: var(--verde_osc);
+        }
+        #div_img_cartel{
+            margin-top: 4em;
+            opacity: 1;
+            transition: 2s;
+        }
+        #div_img_cartel img:hover{
+            opacity: 0.5;
+        }
+        .txt_07{
+            font-family: var(--futura_bold);
+            color: var(--rosa_clar);
+            font-size: 1.6em;
+            text-align: end;
+        }
+        .linea_03{
+            border: 4px solid var(--rosa_osc);
+            width: 200px;
+            padding-right: 8em;
+        }
+        .txt_08{
+            font-family: var(--futura_bold);
+            color: var(--rosa_osc);
+            font-size: 1.3em;
+            text-align: end;
+        }
+        /* FOOTER */
+        footer{
+            margin: 2em 0 1.5em 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        footer p {
+            font-family: var(--futura_bold);
+            color: var(--verde_osc);
+        }
+        footer a {
+            font-family: var(--futura);
+            text-decoration: none;
+            color: var(--verde_clar);
+        }
+        footer a:hover{
+            color: var(--rosa_clar);
+        }
+        .contacto{
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0 1em 0;
+        }
+        
+        /*RESPONSIV*/
+        @media (max-width: 375px){
+            body{
+                font-size: 8px;
+            }
+            .contenedor_general {
+                border: 8px solid var(--rosa_clar);
+            }
+            h1 {
+                width: 2em;
+                height: 0.8em;
+            }
+            .enlaces{
+                text-decoration: none;
+                width: 300px;
+                height: 40px;
+                display: flex;
+                justify-content: flex-end;
+                padding-left: 2px;
+                padding-top: 0.5em;
+            }
+            .enlaces a{
+                font-size: 8px;
+                padding-left: 1em;
+            }
+            h2 {
+                width: 180px;
+                height: 70px;
+                margin: 1em 0 1em 0;
+            }
+            h3 {
+                width: 280px;
+                height: 180px;
+                margin: -1em 0 -3em 0;
+            }
+            .linea_01 {
+                border: 4px solid #99C891;
+                width: 10em;
+            }
+            header>p {
+                color: var(--rosa_clar);
+                font-size: 1em;
+            }
+            header p:last-child {
+                color: #678C61;
+                font-size: 0.5em;
+                margin-top: -1em;
+            }
+            .txt_01{
+                margin: 0 0 0 0;
+                font-size: 8px;
+                color: var(--rosa_osc);
+            }
+            .txt_02{
+                font-family: var(--futura_bold);
+                font-size: 10px;
+                color: var(--rosa_osc);
+                margin: 1em 1em 3em 3.5em;
+                text-align: end;
+            }
+            .carousel slide{
+                height: 3em;
+            }
+            .txt_03{
+                font-size: 10px;
+                font-family: var(--futura_bold);
+                color: var(--verde_osc);
+                /*margin: 4.8em 1em 0 1em;*/
+            }
+            .img_manita{
+                margin: 1em 0 0 10em;
+                width: 4em;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+       <h1><img src="img/logo.png" alt=""></h1>
+       <div class="enlaces">
+           <a href="#about">Sobre mi</a>
+           <a href="#trabajos">Trabajos</a>
+           <a href="#contacto">Contacto</a>
+       </div>
+    </nav>
+    <div class="contenedor_general">
+        <header>
+            <h2><img src="img/HOLA.png"></h2>
+            <h3><img src="img/simbolo_besito.png"></h3>
+            <hr class="linea_01">
+            <p>Soy Alba, encantadx</p>
+            <p>venga te enseño mi mundo</p>
+        </header>
+        <main>
+            <div class="contenedor_grid">
+                <div class="row">
+                   <div class="col-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- <div class="carousel-item active">
+                                <img src="img/" class="d-block w-100" alt="...">
+                            </div> -->
+                            <div class="carousel-item active">
+                                <img src="img/IMG_1658.jpg" class="d-block w-100" alt="jo">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/IMG_1811.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-6" id="about">
+                        <p class="txt_01">Alba de el mundo real es una chica pequeñita que adora el orden, la comida, el mundo editorial, la historia y aprender. Aunque también es un poco perfeccionista con ella misma.</p>
+                        <p class="txt_02">Cuando materializo mi mundo pasa esto</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="txt_03">La gente dice que esto mola</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="img_manita" src="img/manita.png">
+                        <p class="txt_04" id="trabajos">TRABAJOS</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" id="txt_scarface">
+                        <p class="txt_05">SCARFACE</p>
+                        <hr class="linea_02">
+                        <p class="txt_06">Cartelería cine negro</p>   
+                    </div>
+                    <div class="col-8" id="div_img_scarface">
+                        <img class="img_scarface" src="img/mockup_cartel_scarface.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8" id="div_img_cartel">
+                        <img src="img/mockup_cartel_2020.jpg">
+                    </div>
+                    <div class="col-4" id="txt_cartel">
+                        <p class="txt_07">Cartel fiestas</p>
+                        <hr class="linea_03">
+                        <p class="txt_08">ELCHE 2020</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer id="contacto">
+        <p>Nos podemos conocer un poco más y mejor por aquí :)</p>
+        <div class="contacto">
+            <a href="https://www.instagram.com/joveralba/?hl=es">Instagram</a>
+            <a href=»mailto:joveralbadesign@gmail.com»>Email</a>
+            <a href="https://www.behance.net/albajover">Behance</a>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body></html>
